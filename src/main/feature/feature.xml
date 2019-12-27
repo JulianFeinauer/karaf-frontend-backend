@@ -1,0 +1,18 @@
+<features>
+
+    <repository>mvn:org.apache.aries.jax.rs/org.apache.aries.jax.rs.features/1.0.3/xml</repository>
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.1.5/xml/features</repository>
+
+    <feature name="angular-example" version="${project.version}">
+        <feature>scr</feature>
+        <feature>war</feature>
+        <feature>pax-http-whiteboard</feature>
+        <feature>http-whiteboard</feature>
+        <feature>cxf-jaxrs</feature>
+        <feature>aries-jax-rs-whiteboard</feature>
+        <feature>aries-jax-rs-whiteboard-jackson</feature>
+        <bundle>mvn:net.julian/frontend/${project.version}</bundle>
+        <bundle>mvn:net.julian/backend/${project.version}</bundle>
+    </feature>
+
+</features>
