@@ -2,6 +2,7 @@ package net.julian;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.jaxrs.whiteboard.propertytypes.JSONRequired;
 import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
 import org.slf4j.Logger;
 
@@ -17,8 +18,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-@Path("/booking")
 @JaxrsResource
+@Produces(MediaType.APPLICATION_JSON)
+@JSONRequired
+@Path("/booking")
 @Component(immediate = true, service = SimpleServiceImpl.class)
 public class SimpleServiceImpl {
 

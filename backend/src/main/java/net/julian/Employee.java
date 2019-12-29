@@ -1,9 +1,12 @@
 package net.julian;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Employee {
 
     private int id;
 
+    @JsonProperty("asdf")
     private String employee_name;
 
     private int employee_salary;
@@ -28,10 +31,12 @@ public class Employee {
         this.id = id;
     }
 
+    @JsonProperty("asdf")
     public String getEmployee_name() {
         return employee_name;
     }
 
+    @JsonProperty("asdf")
     public void setEmployee_name(String employee_name) {
         this.employee_name = employee_name;
     }

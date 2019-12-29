@@ -13,6 +13,7 @@
     <deploy.url>my-angular-app</deploy.url>
     <karaf.version>4.2.5</karaf.version>
     <karaf-feature-name>karaf-feature</karaf-feature-name>
+    <osgi.version>7.0.0</osgi.version>
   </properties>
 
   <modules>
