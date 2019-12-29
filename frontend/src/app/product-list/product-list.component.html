@@ -86,9 +86,9 @@
 <h2>Products</h2>
 
 <div style="height: 80px; width: 80vw;">
-  <div *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: p }; even as isEven">
+  <div *ngFor="let product of getProducts() | paginate: { itemsPerPage: 10, currentPage: p }; even as isEven">
 
-    <div class="card highlight-card card-small">
+    <div class="card highlight-card card-small" (click)="popup(product.id)">
 
       <svg *ngIf="isEven" id="rocket" alt="Rocket Ship" xmlns="http://www.w3.org/2000/svg" width="101.678"
            height="101.678"

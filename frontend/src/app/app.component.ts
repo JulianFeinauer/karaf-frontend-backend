@@ -14,7 +14,8 @@ export class AppComponent {
       showCloseButton: true,
       tapToDismiss: false,
       timeout: 10000,
-      animation: 'fade'
+      animation: 'fade',
+      limit: 4
     });
 
   title = 'test-cli';

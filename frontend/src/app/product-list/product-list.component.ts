@@ -27,18 +27,31 @@ export class ProductListComponent implements OnInit {
     console.log('Starting Spinner...')
     let promise = this.spinner.show();
     console.log(promise)
-    this.dataService.getAll<any[]>().subscribe((value: any[]) => {
+    this.dataService.getAll<Product[]>().subscribe((value: Product[]) => {
         this.products = value;
         console.log(value);
       },
-      () => {
+      (e: Error) => {
         this.spinner.hide();
-        this.toasterService.pop('error', 'Damn', 'Something went wrong...');
+        this.toasterService.pop('error', 'Damn', 'Something went wrong: ' + e.message);
       },
       () => {
         this.spinner.hide();
         this.toasterService.pop('success', 'Complete', 'Getting all values complete');
       });
+  }
+
+  public getProducts(): Product[] {
+    return this.products;
+  }
+
+  popup(id: number) {
+    this.dataService.getSingle<Product>(id).subscribe(
+      (value:Product) => this.toasterService.pop('info', 'Fetch', 'Hallo ' + value.employee_name),
+      (e: Error) => {
+        this.toasterService.pop('error', 'Damn', 'Something went wrong: ' + e.message);
+      }
+    )
   }
 
 }

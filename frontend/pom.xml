@@ -33,6 +33,7 @@
                   <arg value="build"/>
                   <arg value="--deployUrl"/>
                   <arg value="/${deploy.url}/"/>
+                  <arg value="--configuration=production"/>
                 </exec>
               </target>
             </configuration>

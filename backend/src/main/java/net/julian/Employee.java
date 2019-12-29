@@ -6,21 +6,23 @@ public class Employee {
 
     private int id;
 
-    @JsonProperty("asdf")
-    private String employee_name;
+    @JsonProperty("employee_name")
+    private String employeeName;
 
-    private int employee_salary;
+    @JsonProperty("employee_salary")
+    private int employeeSalary;
 
-    private int employee_age;
+    @JsonProperty("employee_age")
+    private int employeeAge;
 
     public Employee() {
     }
 
     public Employee(int id, String employeeName, int salary, int age) {
         this.id = id;
-        this.employee_name = employeeName;
-        this.employee_salary = salary;
-        this.employee_age = age;
+        this.employeeName = employeeName;
+        this.employeeSalary = salary;
+        this.employeeAge = age;
     }
 
     public int getId() {
@@ -31,39 +33,37 @@ public class Employee {
         this.id = id;
     }
 
-    @JsonProperty("asdf")
-    public String getEmployee_name() {
-        return employee_name;
+    public String getEmployeeName() {
+        return employeeName;
     }
 
-    @JsonProperty("asdf")
-    public void setEmployee_name(String employee_name) {
-        this.employee_name = employee_name;
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 
-    public int getEmployee_salary() {
-        return employee_salary;
+    public int getEmployeeSalary() {
+        return employeeSalary;
     }
 
-    public void setEmployee_salary(int employee_salary) {
-        this.employee_salary = employee_salary;
+    public void setEmployeeSalary(int employeeSalary) {
+        this.employeeSalary = employeeSalary;
     }
 
-    public int getEmployee_age() {
-        return employee_age;
+    public int getEmployeeAge() {
+        return employeeAge;
     }
 
-    public void setEmployee_age(int employee_age) {
-        this.employee_age = employee_age;
+    public void setEmployeeAge(int employeeAge) {
+        this.employeeAge = employeeAge;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
             "id=" + id +
-            ", employee_name='" + employee_name + '\'' +
-            ", employee_salary=" + employee_salary +
-            ", employee_age=" + employee_age +
+            ", employee_name='" + employeeName + '\'' +
+            ", employee_salary=" + employeeSalary +
+            ", employee_age=" + employeeAge +
             '}';
     }
 }

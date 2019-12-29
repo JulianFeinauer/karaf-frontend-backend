@@ -21,8 +21,8 @@ import java.util.stream.IntStream;
 @JaxrsResource
 @Produces(MediaType.APPLICATION_JSON)
 @JSONRequired
-@Path("/booking")
 @Component(immediate = true, service = SimpleServiceImpl.class)
+@Path("/employees")
 public class SimpleServiceImpl {
 
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(SimpleServiceImpl.class);
@@ -38,24 +38,26 @@ public class SimpleServiceImpl {
     }
 
     @GET
-    @Path("/")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Collection<Employee> list() {
+    public Response getAll() {
         try {
             Thread.sleep((int) (Math.random() * 5_000));
         } catch (InterruptedException e) {
             // Intentionally do nothing
         }
-        return employees;
+        return Response
+            .status(Response.Status.OK)
+            .header("Access-Control-Allow-Origin", "*")
+            .entity(employees)
+            .build();
     }
 
     @GET
-    @Path("{id}/")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Path("{id}")
     public Response getEmployee(@PathParam("id") int i) {
         try {
             return Response
                 .status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*")
                 .entity(employees.get(i))
                 .build();
         } catch (IndexOutOfBoundsException e) {
@@ -65,9 +67,10 @@ public class SimpleServiceImpl {
         }
     }
 
-    @POST
-    public void sayHi(Employee e) {
-        logger.info("Employee is {}", e);
-    }
+//    @POST
+//    public void sayHi(Employee e) {
+//        logger.info("Employee is {}", e);
+//    }
 
 }
+

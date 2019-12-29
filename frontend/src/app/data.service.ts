@@ -2,6 +2,7 @@ import {HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Configuration} from './data-service.configuration';
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class DataService {
   private actionUrl: string;
 
   constructor(private http: HttpClient) {
-    this.actionUrl = '/booking';
+    this.actionUrl = environment.apiPrefix
   }
 
   public getAll<T>(): Observable<T> {

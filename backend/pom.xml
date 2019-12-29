@@ -71,8 +71,8 @@
                 <configuration>
                     <exportScr>true</exportScr>
                     <instructions>
-                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*,javax.security.*,org.apache.cxf.jaxrs.provider.*,com.fasterxml.jackson.jaxrs.json;resolution:=optional,
-                            com.fasterxml.jackson.jaxrs.annotation, com.fasterxml.jackson.jaxrs.base</Import-Package>
+<!--                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*,javax.security.*,org.apache.cxf.jaxrs.provider.*,com.fasterxml.jackson.jaxrs.json;resolution:=optional,-->
+<!--                            com.fasterxml.jackson.jaxrs.annotation, com.fasterxml.jackson.jaxrs.base</Import-Package>-->
                     </instructions>
                 </configuration>
             </plugin>
