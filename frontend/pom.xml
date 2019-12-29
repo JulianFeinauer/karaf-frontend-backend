@@ -29,7 +29,8 @@
               <target>
                 <mkdir dir="target"/>
                 <echo message="Generating frontend resource"/>
-                <exec executable="ng">
+                <exec executable="npx">
+                  <arg value="ng"/>
                   <arg value="build"/>
                   <arg value="--deployUrl"/>
                   <arg value="/${deploy.url}/"/>
