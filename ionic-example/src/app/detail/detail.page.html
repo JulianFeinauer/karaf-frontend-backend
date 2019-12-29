@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Employee details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="product">
+   <ion-card-header>
+      <ion-card-title>{{product.employee_name}}</ion-card-title>
+      <ion-card-subtitle>{{id}}</ion-card-subtitle>
+   </ion-card-header>
+  </ion-card>
+
+  <ion-list *ngIf="product">
+    <ion-list-header>
+      More details
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Salary: {{product.employee_salary}}</ion-label>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Age: {{product.employee_age}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,14 @@
+<style>
+  .my-pagination {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+<h2>Products</h2>
+
+<ion-list *ngFor="let product of getProducts() | paginate: { itemsPerPage: 10, currentPage: p }; even as isEven">
+  <ion-item>
+    <ion-label routerLink="/detail/{{product.id}}">{{ product.id }} - {{ product.employee_name }}</ion-label>
+  </ion-item>
+</ion-list>
+<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
