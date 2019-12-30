@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>frontend</artifactId>
+  <artifactId>iconic</artifactId>
   <packaging>bundle</packaging>
 
   <build>
@@ -37,8 +37,9 @@
                   <arg value="ng"/>
                   <arg value="build"/>
                   <arg value="--deployUrl"/>
-                  <arg value="/${deploy.url}/"/>
-                  <arg value="--configuration=production"/>
+                  <arg value="/${iconic.url}/"/>
+                  <!-- TODO make it also compile with prod -->
+<!--                  <arg value="&#45;&#45;configuration=production"/>-->
                 </exec>
               </target>
             </configuration>
@@ -53,9 +54,9 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Web-ContextPath>/${deploy.url}</Web-ContextPath>
+            <Web-ContextPath>/${iconic.url}</Web-ContextPath>
             <Private-Package>*</Private-Package>
-            <Include-Resource>dist/test-cli</Include-Resource>
+            <Include-Resource>dist/iconic</Include-Resource>
           </instructions>
         </configuration>
       </plugin>

@@ -10,14 +10,16 @@
   <packaging>pom</packaging>
 
   <properties>
-    <deploy.url>my-angular-app</deploy.url>
+    <angular.url>angular</angular.url>
+    <iconic.url>iconic</iconic.url>
     <karaf.version>4.2.5</karaf.version>
     <karaf-feature-name>karaf-feature</karaf-feature-name>
     <osgi.version>7.0.0</osgi.version>
   </properties>
 
   <modules>
-    <module>frontend</module>
+    <module>angular</module>
+    <module>iconic</module>
     <module>backend</module>
   </modules>
 
