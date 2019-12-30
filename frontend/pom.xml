@@ -27,6 +27,10 @@
             </goals>
             <configuration>
               <target>
+                <echo message="Executing npm install"/>
+                <exec executable="npm">
+                  <arg value="install"/>
+                </exec>
                 <mkdir dir="target"/>
                 <echo message="Generating frontend resource"/>
                 <exec executable="npx">
