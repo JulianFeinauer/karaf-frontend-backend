@@ -25,16 +25,22 @@ feature:install angular-example
 This will install two bundles, `backend` and `fronted`.
 `frontend` contains an angular 8 based Frontend which consumes resources from the backend which is exposed via CXF.
 
-The Frontend can be called via
+The Frontends can be called via
 ```
-http://localhost:8181/my-angular-app/
+http://localhost:8181/angular/
 ```
-and the backend is wired to
+for the pure angular frontend (from Julian) and
 ```
-http://localhost:8181/booking
+http://localhost:8181/iconic/
+```
+ for the iconic frontend (from Niklas).
+ 
+The backend is wired to
+```
+http://localhost:8181/employee
 ```
 and
 ```
-http://localhost:8181/booking/{id}
+http://localhost:8181/employee/{id}
 ```
 respectively.
