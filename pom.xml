@@ -11,7 +11,7 @@
 
   <properties>
     <angular.url>angular</angular.url>
-    <iconic.url>iconic</iconic.url>
+    <ionic.url>ionic</ionic.url>
     <karaf.version>4.2.5</karaf.version>
     <karaf-feature-name>karaf-feature</karaf-feature-name>
     <osgi.version>7.0.0</osgi.version>
@@ -19,7 +19,7 @@
 
   <modules>
     <module>angular</module>
-    <module>iconic</module>
+    <module>ionic</module>
     <module>backend</module>
   </modules>
 

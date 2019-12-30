@@ -8,7 +8,7 @@
         <feature>aries-jax-rs-whiteboard</feature>
         <feature>aries-jax-rs-whiteboard-jackson</feature>
         <bundle>mvn:net.julian/angular/${project.version}</bundle>
-        <bundle>mvn:net.julian/iconic/${project.version}</bundle>
+        <bundle>mvn:net.julian/ionic/${project.version}</bundle>
         <bundle>mvn:net.julian/backend/${project.version}</bundle>
     </feature>
 

@@ -31,9 +31,9 @@ http://localhost:8181/angular/
 ```
 for the pure angular frontend (from Julian) and
 ```
-http://localhost:8181/iconic/
+http://localhost:8181/ionic/
 ```
- for the iconic frontend (from Niklas).
+ for the ionic frontend (from Niklas).
  
 The backend is wired to
 ```

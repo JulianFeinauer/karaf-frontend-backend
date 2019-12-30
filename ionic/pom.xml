@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>iconic</artifactId>
+  <artifactId>ionic</artifactId>
   <packaging>bundle</packaging>
 
   <build>
@@ -37,7 +37,7 @@
                   <arg value="ng"/>
                   <arg value="build"/>
                   <arg value="--deployUrl"/>
-                  <arg value="/${iconic.url}/"/>
+                  <arg value="/${ionic.url}/"/>
                   <!-- TODO make it also compile with prod -->
 <!--                  <arg value="&#45;&#45;configuration=production"/>-->
                 </exec>
@@ -54,9 +54,9 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Web-ContextPath>/${iconic.url}</Web-ContextPath>
+            <Web-ContextPath>/${ionic.url}</Web-ContextPath>
             <Private-Package>*</Private-Package>
-            <Include-Resource>dist/iconic</Include-Resource>
+            <Include-Resource>dist/ionic</Include-Resource>
           </instructions>
         </configuration>
       </plugin>
