@@ -1,6 +1,7 @@
 # Prerequisites
 
 AFAIR you need maven, git, node and ng.
+Seems to work in gitpod.
 
 # Build 
 
